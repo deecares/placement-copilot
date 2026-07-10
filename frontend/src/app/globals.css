@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAF8F5; /* Warm off-white/cream */
+  --foreground: #2C3539; /* Soft charcoal */
+  --primary: #A294B2;    /* Warm Lavender */
+  --secondary: #92A18F;  /* Pastel Sage */
+  --accent: #EFA694;     /* Pastel Peach */
+  --rose: #D1A2B0;       /* Dusty Rose */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Elegant Soft Card Styling */
+.soft-card {
+  background: #FFFFFF;
+  border: 1px solid #EDE9E3;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px 0 rgba(143, 128, 116, 0.04);
+}
+
+.soft-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soft-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px 0 rgba(143, 128, 116, 0.07);
+  border-color: #DCD7CE;
+}
+
+/* Soft Progress Indicators */
+.progress-bar-bg {
+  background-color: #F3EFEA;
+}
+
+/* Custom Scrollbars for minimalist aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E4DFD5;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C4BEB3;
+}
+
+
