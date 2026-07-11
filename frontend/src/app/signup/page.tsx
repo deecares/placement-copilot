@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { API } from "@/lib/api";
 import { motion } from "framer-motion";
 import { Heart, User, Mail, Lock, CheckCircle2 } from "lucide-react";
 
@@ -45,7 +46,7 @@ export default function SignupPage() {
     setErrorMsg("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/auth/signup", {
+      const response = await fetch(`${API}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

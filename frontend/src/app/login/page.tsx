@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { API } from "@/lib/api";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, Key, Mail, Lock, ShieldCheck, ArrowLeft, Send } from "lucide-react";
 
@@ -39,7 +40,7 @@ export default function LoginPage() {
     setSuccessMsg("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/auth/login", {
+      const response = await fetch(`${API}/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

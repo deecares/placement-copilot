@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { API } from "@/lib/api";
 import { motion } from "framer-motion";
 import { Map, BookOpen, Clock, Compass, Bookmark, CheckSquare } from "lucide-react";
 
@@ -43,7 +44,7 @@ export default function LearningRoadmap({
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://127.0.0.1:8000/api/generate-roadmap", {
+      const response = await fetch(`${API}/api/generate-roadmap`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

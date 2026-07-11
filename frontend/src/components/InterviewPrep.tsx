@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { API } from "@/lib/api";
 import { motion, AnimatePresence } from "framer-motion";
 import { Users, HelpCircle, ArrowLeft, ArrowRight, Play, CheckCircle2, Award, Zap, Code, ShieldCheck, MessageSquare, AlertCircle } from "lucide-react";
 
@@ -51,7 +52,7 @@ export default function InterviewPrep({ resumeSkills }: InterviewPrepProps) {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://127.0.0.1:8000/api/generate-interview", {
+      const response = await fetch(`${API}/api/generate-interview`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -106,7 +107,7 @@ export default function InterviewPrep({ resumeSkills }: InterviewPrepProps) {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://127.0.0.1:8000/api/evaluate-answer", {
+      const response = await fetch(`${API}/api/evaluate-answer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
