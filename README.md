@@ -141,13 +141,6 @@ npm run dev
 ```
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of:
-- Home Page
-- Resume Upload Page
-- Resume Analysis Results
-- ATS Score Dashboard
 
 ---
 
